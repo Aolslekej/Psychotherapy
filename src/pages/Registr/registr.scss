@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.Registr {
+  font-family: "Roboto", sans-serif;
+  margin-top: 50px;
+}
+
+.become {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.label {
+  color: #9290a7;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.input {
+  width: 339px;
+  height: 46px;
+  border: 1px solid #ced2de;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.reg {
+  margin-left: 38%;
+}
+
+.img {
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.text {
+  border: none;
+  width: 300px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.text:focus {
+  outline: none;
+}
+
+.reg-button {
+  margin-left: 37.6%;
+  width: 356px;
+  height: 46px;
+  background-color: #5124ff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.sign {
+    display: inline-block;
+    text-decoration: none;
+    color: #0062F5;
+    margin-left: 5px;
+}
+
+.to-login {
+    display: flex;
+    margin-left: 42%;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
