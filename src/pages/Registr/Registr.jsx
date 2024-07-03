@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import mail from "/mail-line.png";
@@ -9,16 +9,21 @@ import "./registr.scss";
 export default function Registr() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  /*const auth = getAuth();
+  const [errText,setErrText] = useState(false)
+  const auth = getAuth();
+  const navigate = useNavigate(); 
 
   async function createUser(event) {
     event.preventDefault();
-    createUserWithEmailAndPassword(auth, Email, Password).then(
-      (currentUser) => {
-        console.log(currentUser);
-      }
-    );
-  }*/
+    createUserWithEmailAndPassword(auth, Email, Password)
+      .then((currentUser) => {
+        navigate("/");
+        setErrText(false)
+      })
+      .catch((e) => {
+        setErrText(true)
+      });
+  }
 
   return (
     <div className="Registr">
@@ -47,9 +52,12 @@ export default function Registr() {
             />
             <img src={eye} alt="" className="img" />
           </div>
+          {errText && <h4 className="errorReg">Неправильно введен email или пароль</h4>}
         </label>
       </form>
-      <button className="reg-button">Sign up</button>
+      <button className="reg-button" onClick={createUser}>
+        Sign up
+      </button>
       <div className="to-login">
         <p>Already have an account?</p>
         <Link to="/login" className="sign">

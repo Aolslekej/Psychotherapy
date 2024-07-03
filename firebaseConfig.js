@@ -1,9 +1,9 @@
 export default {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+  apiKey: "AIzaSyDSWMzLstWmllMBaT-G90OH6uonuWQVy1A",
+  authDomain: "psychotherapy-e3f8f.firebaseapp.com",
+  projectId: "psychotherapy-e3f8f",
+  storageBucket: "psychotherapy-e3f8f.appspot.com",
+  messagingSenderId: "1076218404316",
+  appId: "1:1076218404316:web:fa5dee4db623aa82cd8319",
+  measurementId: "G-Y2YN9Q2Q3H",
 };

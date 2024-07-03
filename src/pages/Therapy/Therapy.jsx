@@ -1,14 +1,69 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router'
+import React, { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import ocean from "/ocean.png";
+import "./therapy.scss";
 
 export default function Therapy() {
-    const navigate = useNavigate();
-    useEffect(()=>{
-        navigate("/login")
-    },[]);
-    
+  const [user, setUser] = useState("");
+  const navigate = useNavigate();
+  const auth = getAuth();
+  function SignOutBtn() {
+    signOut(auth);
+    navigate("/login");
+  }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (userServ) => {
+      if (userServ) {
+        setUser(userServ);
+      } else {
+        navigate("/login");
+      }
+    });
+  });
+  if (!user) {
+    return;
+  }
 
   return (
-    <div>Therapy</div>
-  )
+    <div className="Therapy">
+      <div className="container">
+        <div className="header">
+          <div className="forsignout">
+            <h1 className="Therapy-h1">Tерапия</h1>
+            <button onClick={SignOutBtn} className="signOut">
+              Sign Out
+            </button>
+          </div>
+          <div className="menu">
+            <Link to="/">
+              <button className="items">Лекции</button>
+            </Link>
+            <Link to="/meditations">
+              <button className="items">Медитации</button>
+            </Link>
+            <Link to="/therapists">
+              <button className="items">Терапевты</button>
+            </Link>
+            <Link>
+              <button className="items">Live вебинары</button>
+            </Link>
+          </div>
+        </div>
+        <div className="main">
+          <h2 className="lectures">Лекции</h2>
+          <div className="lecture-item">
+            <div className="lecture-items">
+              <img src={ocean} alt="" />
+            </div>
+            <div className="lecture-items"></div>
+            <div className="lecture-items"></div>
+            <div className="lecture-items"></div>
+            <div className="lecture-items"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

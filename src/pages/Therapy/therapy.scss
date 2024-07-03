@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.Therapy {
+  font-family: "Roboto", sans-serif;
+}
+
+.Therapy-h1 {
+  color: #212121;
+  font-size: 40px;
+}
+
+.forsignout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.items {
+  background-color: #d8ceff;
+  width: 108px;
+  height: 32px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #2201a2;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signOut {
+  width: 108px;
+  height: 32px;
+  border: none;
+  font-size: 16px;
+  background-color: #ff6466;
+  border-radius: 10px;
+  color: white;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.lectures {
+  color: #212121;
+  font-size: 30px;
+}
