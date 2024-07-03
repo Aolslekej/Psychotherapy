@@ -52,7 +52,7 @@ export default function Login() {
           {errText && <h4 className="error">Не верный email или пароль</h4>}
         </label>
       </form>
-      <a href="" className="forgot">
+      <a href="/forgot" className="forgot">
         Forgot Password?
       </a>
       <button className="log-button" onClick={loginUser}>

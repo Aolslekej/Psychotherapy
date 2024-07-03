@@ -55,7 +55,9 @@ export default function Therapy() {
           <h2 className="lectures">Лекции</h2>
           <div className="lecture-item">
             <div className="lecture-items">
-              <img src={ocean} alt="" />
+              <img src={ocean} alt="" className="lecture-img"/>
+              <h4>Как справляться со стрессом и тревогой?</h4>
+              <p>Стресс можно определить как негативную реакцию... </p>
             </div>
             <div className="lecture-items"></div>
             <div className="lecture-items"></div>

@@ -5,6 +5,7 @@ import Therapy from "./Therapy/Therapy";
 import Medit from "./Medit/Medit";
 import Therapists from "./Therapists/Therapists";
 import Live from "./Live/Live";
+import Forgot from "./Forgot/Forgot";
 
 export {
   Login,
@@ -14,4 +15,5 @@ export {
   Medit,
   Therapists,
   Live,
+  Forgot,
 };
