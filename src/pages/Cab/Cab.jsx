@@ -17,6 +17,19 @@ import global from "/global-line.png";
 export default function Cab() {
   const [theme, setTheme] = useState("light");
   const [text, setText] = useState("Светлая тема");
+  const [avatar, setAvatar] = useState(null);
+
+  const AvatarChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setAvatar(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
 
   const navigate = useNavigate();
   const auth = getAuth();
@@ -38,6 +51,8 @@ export default function Cab() {
     <div className={`${theme === "light" ? "light-theme" : "dark-theme"} Cab`}>
       <div className="container">
         <h1 className="profile">Профиль</h1>
+        {avatar && <img src={avatar} alt="" className="avatar"/>}
+        <input type="file" accept="image/*" onChange={AvatarChange}/>
         <h4 className="redact">Редактировать профиль</h4>
         <div className="profile-items">
           <div className="profile-item">
@@ -104,7 +119,9 @@ export default function Cab() {
           </div>
         </div>
       </div>
-      <h4 className="leave" onClick={SignOutBtn}>Выйти</h4>
+      <h4 className="leave" onClick={SignOutBtn}>
+        Выйти
+      </h4>
     </div>
   );
 }
