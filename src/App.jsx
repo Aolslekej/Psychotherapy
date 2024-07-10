@@ -10,6 +10,7 @@ import {
   Therapists,
   Live,
   Forgot,
+  Cab,
 } from "./pages";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/therapists" element={<Therapists />} />
           <Route path="/live" element={<Live />} />
           <Route path="/forgot" element={<Forgot />} />
+          <Route path="/cab" element={<Cab />} />
         </Routes>
       </main>
     </div>

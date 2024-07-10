@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.profile {
+  color: #212121;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.Cab {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.redact {
+  color: #2c0ba6;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+.iphone-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 20px;
+  margin-left: 50%;
+}
+
+.iphone-switch input {
+  display: none;
+}
+
+.iphone-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 17px;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.iphone-switch input:checked + label {
+  background-color: #34c759;
+}
+
+.iphone-switch label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.iphone-switch input:checked + label:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.profile-items {
+  margin-top: 50px;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.lock {
+  margin-right: 20px;
+}
+
+.pin {
+  color: #212121;
+  font-size: 16px;
+}
+
+.marg {
+  margin-left: 46%;
+}
+
+.change {
+  color: #2c0ba6;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 46.5%;
+  cursor: pointer;
+}
+
+.light-theme {
+  background-color: #f6f6f6;
+}
+
+.dark-theme {
+  background-color: rgba(10, 10, 107, 0.622);
+}
+
+.sec-change {
+  margin-left: 44.1%;
+}
+
+.th-change {
+  margin-left: 51.8%;
+}
+
+.four-change {
+  margin-left: 44.7%;
+}
+
+.five-change {
+  margin-left: 48%;
+}
+
+.leave {
+  text-align: center;
+  margin-right: 20%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: #2c0ba6;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}

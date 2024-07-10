@@ -46,7 +46,7 @@ export default function Therapy() {
             <Link to="/therapists">
               <button className="items">Терапевты</button>
             </Link>
-            <Link>
+            <Link to="/live">
               <button className="items">Live вебинары</button>
             </Link>
           </div>
@@ -55,7 +55,7 @@ export default function Therapy() {
           <h2 className="lectures">Лекции</h2>
           <div className="lecture-item">
             <div className="lecture-items">
-              <img src={ocean} alt="" className="lecture-img"/>
+              <img src={ocean} alt="" className="lecture-img" />
               <h4>Как справляться со стрессом и тревогой?</h4>
               <p>Стресс можно определить как негативную реакцию... </p>
             </div>
@@ -66,6 +66,7 @@ export default function Therapy() {
           </div>
         </div>
       </div>
+      <Link to="/cab">Личный кабинет </Link>
     </div>
   );
 }
