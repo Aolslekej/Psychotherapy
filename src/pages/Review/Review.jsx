@@ -13,7 +13,7 @@ export default function Review() {
     if (storageRev) {
       setArr(storageRev);
     }
-  });
+  },[]);
 
   const addRev = () => {
     setArr([...arr, name, phone, text]);
