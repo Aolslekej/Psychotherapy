@@ -1,0 +1,46 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.slide-text {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.slider {
+  background-color: #5124ff;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.to-cab {
+  color: #5c98f3;
+  text-decoration: none;
+  display: block;
+  margin-top: 50px;
+}
+
+.next-ar {
+  cursor: pointer;
+}
+
+.back-ar {
+  transform: rotate(180deg);
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.arrows {
+  margin-top: 30px;
+  text-align: center;
+}

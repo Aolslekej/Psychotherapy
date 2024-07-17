@@ -11,6 +11,9 @@ import {
   Live,
   Forgot,
   Cab,
+  Review,
+  Onboarding,
+  Contact,
 } from "./pages";
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
           <Route path="/live" element={<Live />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/cab" element={<Cab />} />
+          <Route path="/rev" element={<Review />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </div>

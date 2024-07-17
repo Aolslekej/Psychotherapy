@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.Review {
+  font-family: "Roboto", sans-serif;
+}
+
+.rev-h1 {
+  text-align: center;
+  color: #212121;
+  margin-top: 50px;
+}
+
+.rev-text {
+  text-align: center;
+  color: #babdc8;
+  margin-top: 20px;
+}
+
+.your-inf {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.inp-inf {
+  width: 339px;
+  height: 46px;
+  border: 1px solid #ced2de;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.inp-inf:focus {
+  outline: none;
+}
+
+.your-text {
+  margin-left: 18%;
+  margin-top: 20px;
+  width: 706px;
+  padding-left: 20px;
+  font-size: 14px;
+  border: 1px solid #ced2de;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 200px;
+  padding-bottom: 110px;
+}
+
+.your-text:focus {
+  outline: none;
+}
+
+.phone {
+  margin-left: 30px;
+}
+
+.send-rev {
+  display: block;
+  margin-left: 36%;
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: #5124ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+
+.send-rev:hover {
+  transform: scale(1.2);
+}
+
+.send-rev:active {
+  background-color: #3310be;
+}
+
+.rev {
+  text-align: center;
+  margin-bottom: 20px;
+}

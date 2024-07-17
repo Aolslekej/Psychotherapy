@@ -7,6 +7,9 @@ import Therapists from "./Therapists/Therapists";
 import Live from "./Live/Live";
 import Forgot from "./Forgot/Forgot";
 import Cab from "./Cab/Cab";
+import Review from "./Review/Review";
+import Onboarding from "./Onboarding/Onboarding";
+import Contact from "./Contact/Contact";
 
 export {
   Login,
@@ -17,5 +20,8 @@ export {
   Therapists,
   Live,
   Forgot,
-  Cab
+  Cab,
+  Review,
+  Onboarding,
+  Contact
 };

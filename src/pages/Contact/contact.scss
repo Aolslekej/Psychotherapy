@@ -1,0 +1,30 @@
+.Contact {
+  font-family: "Roboto", sans-serif;
+  margin-top: 100px;
+}
+
+.or {
+    margin-left: 50%;
+    font-weight: 400;
+}
+
+.ph {
+    font-weight: 500;
+}
+
+.cont-dis {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-block {
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 10px;
+    color: #212121;
+}
+
+.h1-cont {
+    text-align: center;
+    margin-bottom: 100px;
+}
