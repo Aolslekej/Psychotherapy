@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./review.scss";
 
 export default function Review() {
@@ -7,6 +7,13 @@ export default function Review() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [text, setText] = useState("");
+
+  useEffect(() => {
+    const storageRev = JSON.parse(localStorage.getItem(arr));
+    if (storageRev) {
+      setArr(storageRev);
+    }
+  });
 
   const addRev = () => {
     setArr([...arr, name, phone, text]);
@@ -58,7 +65,7 @@ export default function Review() {
       <>
         {arr.map((item, index) => (
           <div className="block" key={index}>
-              <h2 className="rev">{item}</h2>
+            <h2 className="rev">{item}</h2>
           </div>
         ))}
       </>
