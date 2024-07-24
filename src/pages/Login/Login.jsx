@@ -2,19 +2,31 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../store/slices/userSlice";
 import mail from "/mail-line.png";
 import eye from "/eye-line.png";
 import "./login.scss";
 
 export default function Login() {
+  const dispatch = useDispatch();
+
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [errText, setErrText] = useState(false)
+  const [errText, setErrText] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
   function loginUser() {
     signInWithEmailAndPassword(auth, Email, Password)
       .then((user) => {
+        console.log(user);
+        dispatch(
+          setUser({
+            Email: user.email,
+            id: user.uid,
+            token: user.accesstoken,
+          })
+        );
         setErrText(false);
         console.log(user);
         navigate("/");

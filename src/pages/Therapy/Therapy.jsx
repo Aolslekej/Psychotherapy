@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { removeUser } from "../../store/slices/userSlice";
 import ocean from "/ocean.png";
 import "./therapy.scss";
 
 export default function Therapy() {
+  const dispatch = useDispatch();
   const [user, setUser] = useState("");
   const navigate = useNavigate();
   const auth = getAuth();
@@ -32,7 +35,13 @@ export default function Therapy() {
         <div className="header">
           <div className="forsignout">
             <h1 className="Therapy-h1">Tерапия</h1>
-            <button onClick={SignOutBtn} className="signOut">
+            <button
+              onClick={() => {
+                SignOutBtn();
+                dispatch(removeUser());
+              }}
+              className="signOut"
+            >
               Sign Out
             </button>
           </div>
