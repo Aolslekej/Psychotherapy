@@ -2,22 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { signOut, getAuth } from "firebase/auth";
-import firebase from "firebase/compat/app";
+import { useDispatch } from "react-redux";
+import { removeUser } from "../../store/slices/userSlice";
 import "firebase/storage";
 import "./cab.scss";
 import lock from "/lock-line.png";
 import moon from "/moon-line.png";
-import not from "/notification-3-line.png";
-import bag from "/shopping-bag-4-line.png";
-import coins from "/database-2-line.png";
 import chat from "/chat-smile-line.png";
-import radio from "/rfid-fill.png";
 import support from "/question-fill.png";
 import quest from "/questionnaire-fill.png";
 import global from "/global-line.png";
 import { Link } from "react-router-dom";
 
 export default function Cab() {
+  const dispatch = useDispatch();
   const [theme, setTheme] = useState("light");
   const [text, setText] = useState("Светлая тема");
   const [avatar, setAvatar] = useState(null);
@@ -57,7 +55,7 @@ export default function Cab() {
     if (file) {
       reader.readAsDataURL(file);
 
-     /*const storageRef = firebase.storage().ref();
+      /*const storageRef = firebase.storage().ref();
       const avatarRef = storageRef.child(`avatars/${file.name}`);
 
       avatarRef
@@ -145,11 +143,19 @@ export default function Cab() {
           </div>
           <div className="profile-item">
             <img src={global} alt="" className="lock" />
-            <Link to="/contact" className="pin cont">Связаться </Link>
+            <Link to="/contact" className="pin cont">
+              Связаться{" "}
+            </Link>
           </div>
         </div>
       </div>
-      <h4 className="leave" onClick={SignOutBtn}>
+      <h4
+        className="leave"
+        onClick={() => {
+          SignOutBtn();
+          dispatch(removeUser());
+        }}
+      >
         Выйти
       </h4>
     </div>

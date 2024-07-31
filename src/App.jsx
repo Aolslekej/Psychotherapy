@@ -14,6 +14,11 @@ import {
   Review,
   Onboarding,
   Contact,
+  Ocean,
+  Lego,
+  Bench,
+  Society,
+  Enjoy,
 } from "./pages";
 
 function App() {
@@ -34,6 +39,11 @@ function App() {
           <Route path="/rev" element={<Review />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ocean" element={<Ocean />} />
+          <Route path="/lego" element={<Lego />} />
+          <Route path="/bench" element={<Bench />} />
+          <Route path="/society" element={<Society />} />
+          <Route path="/enjoy" element={<Enjoy />} />
         </Routes>
       </main>
     </div>
