@@ -71,6 +71,12 @@
   margin-top: 50px;
 }
 
+.lect-h4 {
+  color: #212121;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .lecture-items {
   margin-bottom: 50px;
   transition-duration: 0.3s;
@@ -80,4 +86,14 @@
 .lecture-items:hover {
   transform: scale(1.2);
 
+}
+
+.link {
+  text-decoration: none;
+}
+
+.lect-text {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
 }

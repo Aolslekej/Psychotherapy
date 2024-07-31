@@ -10,11 +10,7 @@ import Cab from "./Cab/Cab";
 import Review from "./Review/Review";
 import Onboarding from "./Onboarding/Onboarding";
 import Contact from "./Contact/Contact";
-import Ocean from "./Ocean/Ocean";
-import Lego from "./Lego/Lego";
-import Bench from "./Bench/Bench";
-import Society from "./Society/Society";
-import Enjoy from "./Enjoy/Enjoy";
+import LectionPage from "./LectionsPage/LectionPage";
 
 export {
   Login,
@@ -29,9 +25,5 @@ export {
   Review,
   Onboarding,
   Contact,
-  Ocean,
-  Lego,
-  Bench,
-  Society,
-  Enjoy,
+  LectionPage,
 };
