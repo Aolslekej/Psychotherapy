@@ -9,6 +9,7 @@ import eye from "/eye-line.png";
 import "./login.scss";
 
 export default function Login() {
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
 
   const [Email, setEmail] = useState("");
@@ -16,6 +17,11 @@ export default function Login() {
   const [errText, setErrText] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
+  };
+
   function loginUser() {
     signInWithEmailAndPassword(auth, Email, Password)
       .then((user) => {
@@ -54,12 +60,12 @@ export default function Login() {
           Password
           <div className="input">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
               className="text"
             />
-            <img src={eye} alt="" className="img" />
+            <img src={eye} alt="" className="img" onClick={togglePasswordVisibility}/>
           </div>
           {errText && <h4 className="error">Не верный email или пароль</h4>}
         </label>

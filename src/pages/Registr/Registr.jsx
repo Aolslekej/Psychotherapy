@@ -9,12 +9,17 @@ import eye from "/eye-line.png";
 import "./registr.scss";
 
 export default function Registr() {
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [errText, setErrText] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
+  };
 
   async function createUser(event) {
     event.preventDefault();
@@ -56,12 +61,17 @@ export default function Registr() {
           Password
           <div className="input">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={Password}
               onChange={(e) => setPassword(e.target.value)}
               className="text"
             />
-            <img src={eye} alt="" className="img" />
+            <img
+              src={eye}
+              alt=""
+              className="img"
+              onClick={togglePasswordVisibility}
+            />
           </div>
           {errText && (
             <h4 className="errorReg">Неправильно введен email или пароль</h4>
