@@ -15,6 +15,7 @@ import {
   Onboarding,
   Contact,
   LectionPage,
+  MeditationPage,
 } from "./pages";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/lections/:id" element={<LectionPage />} />
+          <Route path="/meditations/:id" element={<MeditationPage />} />
         </Routes>
       </main>
     </div>

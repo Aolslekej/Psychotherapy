@@ -101,22 +101,26 @@ export default function Medit() {
               <br /> выводит из депрессии
             </p>
           </div>
-          <div className="med-items">
-            <img src={stress} alt="" className="med-img" />
-            <h4 className="med-h4"> Для снижения стресса</h4>
-            <p className="med-text">
-              Повышает
-              <br /> стрессоустойчивость
-            </p>
-          </div>
-          <div className="med-items">
-            <img src={forNew} alt="" className="med-img" />
-            <h4 className="med-h4">Для новичков</h4>
-            <p className="med-text">
-              Обучающий
-              <br /> материал
-            </p>
-          </div>
+          <Link to="/meditations/2" className="style-link">
+            <div className="med-items">
+              <img src={stress} alt="" className="med-img" />
+              <h4 className="med-h4"> Для снижения стресса</h4>
+              <p className="med-text">
+                Повышает
+                <br /> стрессоустойчивость
+              </p>
+            </div>
+          </Link>
+          <Link to="/meditations/1" className="style-link">
+            <div className="med-items">
+              <img src={forNew} alt="" className="med-img" />
+              <h4 className="med-h4">Для новичков</h4>
+              <p className="med-text">
+                Обучающий
+                <br /> материал
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

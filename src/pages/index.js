@@ -11,6 +11,7 @@ import Review from "./Review/Review";
 import Onboarding from "./Onboarding/Onboarding";
 import Contact from "./Contact/Contact";
 import LectionPage from "./LectionsPage/LectionPage";
+import MeditationPage from "./MeditationPage/MeditationPage";
 
 export {
   Login,
@@ -26,4 +27,5 @@ export {
   Onboarding,
   Contact,
   LectionPage,
+  MeditationPage
 };

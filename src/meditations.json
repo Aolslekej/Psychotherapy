@@ -1,0 +1,28 @@
+[
+  {
+    "h1": "Для новичков",
+    "titlefirst": "Звуки природы",
+    "timefirst": "10 мин",
+    "titlesecond": "Снятие стресса",
+    "timesecond": "15 мин",
+    "titlethird": "Релаксация",
+    "timethird": "20 мин",
+    "img": "/forest.png",
+    "img2": "/field.png",
+    "img3": "/water.png",
+    "id": 1
+  },
+  {
+    "h1": "Для снижения стресса",
+    "titlefirst": "Расслабляющая",
+    "timefirst": "10 мин",
+    "titlesecond": "Дыхательная",
+    "timesecond": "10 мин",
+    "titlethird": "Авторегуляция",
+    "timethird": "10 мин",
+    "img": "/dark-water.png",
+    "img2": "/breathe.png",
+    "img3": "/sunset.png",
+    "id": 2
+  }
+]
