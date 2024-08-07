@@ -8,7 +8,6 @@ import lego from "/lego.jpeg";
 import bench from "/bench.jpeg";
 import society from "/society.jpeg";
 import enjoy from "/enjoy.jpeg";
-import lections from "../../lections.json";
 import "./therapy.scss";
 
 export default function Therapy() {
