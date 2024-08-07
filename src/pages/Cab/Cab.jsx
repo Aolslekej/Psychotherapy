@@ -33,6 +33,13 @@ export default function Cab() {
     return Math.floor(1000 + Math.random() * 9000);
   }
 
+  useEffect(() => {
+    const savedAvatar = localStorage.getItem("userAvatar");
+    if (savedAvatar) {
+      setAvatar(savedAvatar);
+    }
+  }, []);
+
   const handleCheckboxChange = (event) => {
     setChecked(event.target.checked);
     if (event.target.checked) {
@@ -51,6 +58,7 @@ export default function Cab() {
 
     reader.onloadend = () => {
       setAvatar(reader.result);
+      localStorage.setItem("userAvatar", reader.result);
     };
     if (file) {
       reader.readAsDataURL(file);
