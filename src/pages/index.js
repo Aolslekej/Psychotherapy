@@ -12,6 +12,7 @@ import Onboarding from "./Onboarding/Onboarding";
 import Contact from "./Contact/Contact";
 import LectionPage from "./LectionsPage/LectionPage";
 import MeditationPage from "./MeditationPage/MeditationPage";
+import ForestAudio from "./ForestAudio/ForestAudio";
 
 export {
   Login,
@@ -27,5 +28,6 @@ export {
   Onboarding,
   Contact,
   LectionPage,
-  MeditationPage
+  MeditationPage,
+  ForestAudio,
 };

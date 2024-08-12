@@ -16,6 +16,7 @@ import {
   Contact,
   LectionPage,
   MeditationPage,
+  ForestAudio,
 } from "./pages";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/lections/:id" element={<LectionPage />} />
           <Route path="/meditations/:id" element={<MeditationPage />} />
+          <Route path="/audio" element={<ForestAudio />} />
         </Routes>
       </main>
     </div>

@@ -6,6 +6,7 @@ import {
   isSignInWithEmailLink,
   sendSignInLinkToEmail,
   signInWithEmailLink,
+  onAuthStateChanged,
 } from "firebase/auth";
 import "./forgot.scss";
 import { useNavigate } from "react-router";
@@ -18,33 +19,6 @@ export default function Forgot() {
   const [infMess, setInfMess] = useState("");
   const [logLoad, setLogLoad] = useState(false);
   const [logErr, setLogErr] = useState("");
-
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    } else {
-      if (isSignInWithEmailLink(auth, window.location.href)) {
-        let email = localStorage.getItem("email");
-        if (!email) {
-          email = window.prompt("Подтвердите ваш email");
-        }
-        signInWithEmailLink(
-          auth,
-          localStorage.getItem("email"),
-          window.location.href
-        )
-          .then((result) => {
-            console.log(result.user);
-            localStorage.removeItem("email");
-            navigate("/");
-          })
-          .catch((e) => {
-            console.log(e.message);
-            navigate("/login");
-          });
-      }
-    }
-  }, []);
 
   const handleLogin = () => {
     setLogLoad(true);
