@@ -19,3 +19,18 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+.therapists-item {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.therapists-items {
+  margin-top: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.therapists-items:hover {
+  transform: scale(1.2);
+}

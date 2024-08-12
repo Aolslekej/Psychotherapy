@@ -68,42 +68,54 @@ export default function Therapists() {
           </div>
         </div>
         <div className="therapists-item">
-          <div className="therapists-items">
-            <img src={Oleg} alt="" />
-            <h3 className="name-h3">Олег Куров</h3>
-            <h4 className="work-h4">Психолог</h4>
-            <p className="price-p">Сессия 50 минут, 20$</p>
-          </div>
-          <div className="therapists-items">
-            <img src={Anna} alt="" />
-            <h3 className="name-h3">Анна Туричева</h3>
-            <h4 className="work-h4">Психотерапевт</h4>
-            <p className="price-p">Сессия 50 минут, 20$</p>
-          </div>
-          <div className="therapists-items">
-            <img src={Kate} alt="" />
-            <h3 className="name-h3">Катя Лиман</h3>
-            <h4 className="work-h4">Психиатр</h4>
-            <p className="price-p">Сессия 80 минут, 40$</p>
-          </div>
-          <div className="therapists-items">
-            <img src={Alina} alt="" />
-            <h3 className="name-h3">Алина Кунт</h3>
-            <h4 className="work-h4">Психотерапевт</h4>
-            <p className="price-p">Сессия 70 минут, 25$</p>
-          </div>
-          <div className="therapists-items">
-            <img src={Olga} alt="" />
-            <h3 className="name-h3">Ольга Шивко</h3>
-            <h4 className="work-h4">Психиатр</h4>
-            <p className="price-p">Сессия 60 минут, 35$</p>
-          </div>
-          <div className="therapists-items">
-            <img src={Ivan} alt="" />
-            <h3 className="name-h3">Иван Домиров</h3>
-            <h4 className="work-h4">Психиатр</h4>
-            <p className="price-p">Сессия 60 минут, 35$</p>
-          </div>
+          <Link to="/therapists/1" className="style-link">
+            <div className="therapists-items">
+              <img src={Oleg} alt="" />
+              <h3 className="name-h3">Олег Куров</h3>
+              <h4 className="work-h4">Психолог</h4>
+              <p className="price-p">Сессия 50 минут, 20$</p>
+            </div>
+          </Link>
+          <Link to="/therapists/2" className="style-link">
+            <div className="therapists-items">
+              <img src={Anna} alt="" />
+              <h3 className="name-h3">Анна Туричева</h3>
+              <h4 className="work-h4">Психотерапевт</h4>
+              <p className="price-p">Сессия 50 минут, 20$</p>
+            </div>
+          </Link>
+          <Link to="/therapists/3" className="style-link">
+            <div className="therapists-items">
+              <img src={Kate} alt="" />
+              <h3 className="name-h3">Катя Лиман</h3>
+              <h4 className="work-h4">Психиатр</h4>
+              <p className="price-p">Сессия 80 минут, 40$</p>
+            </div>
+          </Link>
+          <Link to="/therapists/4" className="style-link">
+            <div className="therapists-items">
+              <img src={Alina} alt="" />
+              <h3 className="name-h3">Алина Кунт</h3>
+              <h4 className="work-h4">Психотерапевт</h4>
+              <p className="price-p">Сессия 70 минут, 25$</p>
+            </div>
+          </Link>
+          <Link to="/therapists/5" className="style-link">
+            <div className="therapists-items">
+              <img src={Olga} alt="" />
+              <h3 className="name-h3">Ольга Шивко</h3>
+              <h4 className="work-h4">Психиатр</h4>
+              <p className="price-p">Сессия 60 минут, 35$</p>
+            </div>
+          </Link>
+          <Link to="/therapists/6" className="style-link">
+            <div className="therapists-items">
+              <img src={Ivan} alt="" />
+              <h3 className="name-h3">Иван Домиров</h3>
+              <h4 className="work-h4">Психиатр</h4>
+              <p className="price-p">Сессия 60 минут, 25$</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
