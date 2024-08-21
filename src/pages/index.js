@@ -14,6 +14,7 @@ import LectionPage from "./LectionsPage/LectionPage";
 import MeditationPage from "./MeditationPage/MeditationPage";
 import ForestAudio from "./ForestAudio/ForestAudio";
 import TherapistsPage from "./TherapistsPage/TherapistsPage";
+import LivePage from "./LivePage/LivePage";
 
 export {
   Login,
@@ -32,4 +33,5 @@ export {
   MeditationPage,
   ForestAudio,
   TherapistsPage,
+  LivePage,
 };
