@@ -25,17 +25,19 @@ export default function MeditationPage() {
         <img src={back} alt="" />
       </Link>
       <h1 className="meditPage-h1">{meditationpage.h1}</h1>
-      <div className=" for-all-blocks" style={style1}>
-        <div className="blur-block">
-          <h3 className="meditPage-h3">{meditationpage.titlefirst}</h3>
-          <div className="disp-block">
-            <img src={mic} alt="" className="disp-img" />
-            <p className="disp-text">Запись</p>
-            <img src={time} alt="" className="disp-img" />
-            <p className="disp-text">{meditationpage.timefirst}</p>
+      <Link to="/audio">
+        <div className=" for-all-blocks" style={style1}>
+          <div className="blur-block">
+            <h3 className="meditPage-h3">{meditationpage.titlefirst}</h3>
+            <div className="disp-block">
+              <img src={mic} alt="" className="disp-img" />
+              <p className="disp-text">Запись</p>
+              <img src={time} alt="" className="disp-img" />
+              <p className="disp-text">{meditationpage.timefirst}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="meditPage-block-2 for-all-blocks" style={style2}>
         <div className="blur-block">
           <h3 className="meditPage-h3">{meditationpage.titlesecond}</h3>
@@ -47,19 +49,17 @@ export default function MeditationPage() {
           </div>
         </div>
       </div>
-      <Link to="/audio">
-        <div className="meditPage-block-3 for-all-blocks" style={style3}>
-          <div className="blur-block">
-            <h3 className="meditPage-h3">{meditationpage.titlethird}</h3>
-            <div className="disp-block">
-              <img src={mic} alt="" className="disp-img" />
-              <p className="disp-text">Запись</p>
-              <img src={time} alt="" className="disp-img" />
-              <p className="disp-text">{meditationpage.timefirst}</p>
-            </div>
+      <div className="meditPage-block-3 for-all-blocks" style={style3}>
+        <div className="blur-block">
+          <h3 className="meditPage-h3">{meditationpage.titlethird}</h3>
+          <div className="disp-block">
+            <img src={mic} alt="" className="disp-img" />
+            <p className="disp-text">Запись</p>
+            <img src={time} alt="" className="disp-img" />
+            <p className="disp-text">{meditationpage.timefirst}</p>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

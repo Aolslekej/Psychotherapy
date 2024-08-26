@@ -6,7 +6,6 @@ import {
   isSignInWithEmailLink,
   sendSignInLinkToEmail,
   signInWithEmailLink,
-  onAuthStateChanged,
 } from "firebase/auth";
 import "./forgot.scss";
 import { useNavigate } from "react-router";
@@ -15,7 +14,6 @@ export default function Forgot() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const auth = getAuth();
-  const [user] = useAuthState(auth);
   const [infMess, setInfMess] = useState("");
   const [logLoad, setLogLoad] = useState(false);
   const [logErr, setLogErr] = useState("");
@@ -27,7 +25,7 @@ export default function Forgot() {
       handleCodeInApp: true,
     })
       .then(() => {
-        localStorage.setItem("email", email);
+        window.localStorage.setItem("emailForSignIn", email);
         setInfMess("Ссылка отправлена на ваш email");
         setLogLoad(false);
         setLogErr("");
@@ -37,6 +35,20 @@ export default function Forgot() {
         setLogErr(e.message);
       });
   };
+
+  if (isSignInWithEmailLink(auth, window.location.href)) {
+    let email = window.localStorage.getItem("emailForSignIn");
+    if (!email) {
+      email = window.prompt("Please provide your email for confirmation");
+    }
+    signInWithEmailLink(auth, email, window.location.href)
+      .then((result) => {
+        window.localStorage.removeItem("emailForSignIn");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
   return (
     <div className="Forgot">
       <h1 className="yourEm">Введите ваш email</h1>
