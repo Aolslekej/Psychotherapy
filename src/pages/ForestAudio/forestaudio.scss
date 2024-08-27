@@ -5,5 +5,49 @@
 }
 
 .ForestAudio {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-image: url(/forestBack.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.audio-h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.audio-h4 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.audio-reverse {
+  transform: rotate(180deg);
+}
+
+.audio-button {
+  background-color: transparent;
+  border: none;
+}
+
+.audio-img {
+  width: 36.57px;
+  height: 36.57px;
+  padding-left: 15%;
+}
+
+.play-button {
+  background-color: transparent;
+  border: none;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.audio-menu {
+  margin-top: 50px;
 }

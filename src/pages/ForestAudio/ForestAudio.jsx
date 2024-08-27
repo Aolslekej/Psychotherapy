@@ -1,27 +1,31 @@
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
+import skip from "/skip.png";
+import start from "/start.png";
+import pause from "/pause.png";
 import "./forestaudio.scss";
 
 export default function ForestAudio() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentTrack, setCurrentTrack] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
 
   const tracks = [
     {
-      title: "Track 1",
+      title: "Forest",
+      sound: "Fir",
       src: "/forestAudio.mp3",
     },
     {
-      title: "Track 2",
+      title: "Forest",
+      sound:"Birds",
       src: "/anti-stress.mp3",
     },
     {
-      title: "Track 3",
-      src: "/relaxAudio.mp3",
+      title: "Forest",
+      sound:"Evening",
+      src: "/evening.mp3",
     },
   ];
 
@@ -53,14 +57,23 @@ export default function ForestAudio() {
   return (
     <div className="ForestAudio">
       <h2 className="audio-h2">{tracks[currentTrack].title}</h2>
+      <h4 className="audio-h4">{tracks[currentTrack].sound}</h4>
       <audio
         src={tracks[currentTrack].src}
         ref={audioRef}
         onEnded={playNextTrack}
       ></audio>
-      <button onClick={playPrevTrack}>Prev</button>
-      <button onClick={playAndPause}>{isPlaying ? "Играть" : "Пауза"}</button>
-      <button onClick={playNextTrack}>Next</button>
+      <div className="audio-menu">
+        <button onClick={playPrevTrack} className="audio-button">
+          <img src={skip} alt="" className="audio-reverse" />
+        </button>
+        <button onClick={playAndPause} className="play-button">
+          <img src={isPlaying ? start : pause} alt="" className="audio-img" />
+        </button>
+        <button onClick={playNextTrack} className="audio-button">
+          <img src={skip} alt="" />
+        </button>
+      </div>
     </div>
   );
 }

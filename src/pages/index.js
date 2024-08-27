@@ -15,6 +15,8 @@ import MeditationPage from "./MeditationPage/MeditationPage";
 import ForestAudio from "./ForestAudio/ForestAudio";
 import TherapistsPage from "./TherapistsPage/TherapistsPage";
 import LivePage from "./LivePage/LivePage";
+import StressAudio from "./StressAudio/StressAudio";
+import RelaxAudio from "./RelaxAudio/RelaxAudio";
 
 export {
   Login,
@@ -34,4 +36,6 @@ export {
   ForestAudio,
   TherapistsPage,
   LivePage,
+  StressAudio,
+  RelaxAudio,
 };
