@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import skip from "/skip.png";
 import start from "/start.png";
 import pause from "/pause.png";
@@ -10,6 +11,33 @@ export default function ForestAudio() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentTrack, setCurrentTrack] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    const updateDuration = () => {
+      setDuration(audio.duration);
+    };
+
+    const updateCurrentTime = () => {
+      setCurrentTime(audio.currentTime);
+    };
+
+    audio.addEventListener("loadedmetadata", updateDuration);
+    audio.addEventListener("timeupdate", updateCurrentTime);
+
+    return () => {
+      audio.removeEventListener("loadedmetadata", updateDuration);
+      audio.removeEventListener("timeupdate", updateCurrentTime);
+    };
+  }, []);
+
+  const handleSeek = (e) => {
+    const seekTime = (e.nativeEvent.offsetX / e.target.clientWidth) * duration;
+    audioRef.current.currentTime = seekTime;
+  };
 
   const tracks = [
     {
@@ -19,12 +47,12 @@ export default function ForestAudio() {
     },
     {
       title: "Forest",
-      sound:"Birds",
+      sound: "Birds",
       src: "/anti-stress.mp3",
     },
     {
       title: "Forest",
-      sound:"Evening",
+      sound: "Evening",
       src: "/evening.mp3",
     },
   ];
@@ -63,6 +91,10 @@ export default function ForestAudio() {
         ref={audioRef}
         onEnded={playNextTrack}
       ></audio>
+      <input type="range" min="0" max={duration} value={currentTime} onChange={handleSeek}/>
+      <div>
+        {Math.floor(currentTime)} / {Math.floor(duration)} seconds
+      </div>
       <div className="audio-menu">
         <button onClick={playPrevTrack} className="audio-button">
           <img src={skip} alt="" className="audio-reverse" />
