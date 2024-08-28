@@ -8,6 +8,7 @@ import lego from "/lego.jpeg";
 import bench from "/bench.jpeg";
 import society from "/society.jpeg";
 import enjoy from "/enjoy.jpeg";
+import userFill from "/user-fill.png";
 import "./therapy.scss";
 
 export default function Therapy() {
@@ -37,6 +38,7 @@ export default function Therapy() {
     <div className="Therapy">
       <div className="container">
         <div className="header">
+          <Link to="/cab"><img src={userFill} alt="" className="userFill"/></Link>
           <div className="forsignout">
             <h1 className="Therapy-h1">Tерапия</h1>
             <button
@@ -70,42 +72,59 @@ export default function Therapy() {
             <Link to="/lections/1" className="link">
               <div className="lecture-items">
                 <img src={ocean} alt="" className="lecture-img" />
-                <h4 className="lect-h4">Как справляться со стрессом и тревогой?</h4>
-                <p className="lect-text">Стресс можно определить как негативную реакцию... </p>
+                <h4 className="lect-h4">
+                  Как справляться со стрессом и тревогой?
+                </h4>
+                <p className="lect-text">
+                  Стресс можно определить как негативную реакцию... 
+                </p>
               </div>
             </Link>
             <Link to="/lections/2" className="link">
               <div className="lecture-items">
                 <img src={lego} alt="" className="lecture-img" />
-                <h4 className="lect-h4">Как научиться контролировать эмоции?</h4>
-                <p className="lect-text">Эмоции играют важную роль в нашей жизни... </p>
+                <h4 className="lect-h4">
+                  Как научиться контролировать эмоции?
+                </h4>
+                <p className="lect-text">
+                  Эмоции играют важную роль в нашей жизни... 
+                </p>
               </div>
             </Link>
             <Link to="/lections/3" className="link">
               <div className="lecture-items">
                 <img src={bench} alt="" className="lecture-img" />
-                <h4 className="lect-h4">Одиночество и одинокий: в чём разница?</h4>
-                <p className="lect-text">Одиночество и одинокий часто путают, но...</p>
+                <h4 className="lect-h4">
+                  Одиночество и одинокий: в чём разница?
+                </h4>
+                <p className="lect-text">
+                  Одиночество и одинокий часто путают, но...
+                </p>
               </div>
             </Link>
             <Link to="/lections/4" className="link">
               <div className="lecture-items">
                 <img src={society} alt="" className="lecture-img" />
-                <h4 className="lect-h4">Как общество влияет на наше состояние?</h4>
-                <p className="lect-text">Созависимость не только негативно влияет на...</p>
+                <h4 className="lect-h4">
+                  Как общество влияет на наше состояние?
+                </h4>
+                <p className="lect-text">
+                  Созависимость не только негативно влияет на...
+                </p>
               </div>
             </Link>
             <Link to="/lections/5" className="link">
               <div className="lecture-items">
                 <img src={enjoy} alt="" className="lecture-img" />
                 <h4 className="lect-h4">Как получать удовольствие от жизни?</h4>
-                <p className="lect-text">Стресс можно определить как негативную реакцию... </p>
+                <p className="lect-text">
+                  Стресс можно определить как негативную реакцию... 
+                </p>
               </div>
             </Link>
           </div>
         </div>
       </div>
-      <Link to="/cab">Личный кабинет </Link>
     </div>
   );
 }
